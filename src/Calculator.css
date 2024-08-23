@@ -1,0 +1,153 @@
+/* src/Calculator.css */
+
+/* Overall Calculator Styles */
+.calculator {
+  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 18px 0;
+  box-sizing: border-box; 
+}
+
+.display {
+  padding: 25px;
+  border-bottom: 1px solid #ddd;
+  background: #e6c6c6;
+  box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Result Fields */
+.display input {
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+  border: 3px solid #000000; /* Add border with light gray color */
+  border-radius: 5px;
+  text-align: right;
+  font-size: 1.5rem; /* Use relative units for scalability */
+  background: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+/* Input Focus State */
+.display input:focus {
+  border-color: #ff8c00; /* Orange border color on focus */
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.3); /* Glow effect */
+}
+
+/* Button Grid Layout */
+.buttons {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+/* General Button Styling */
+.buttons button {
+  padding: 15px;
+  font-size: 1.2rem; /* Use relative units for scalability */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  background: #ffffff;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover State */
+.buttons button:hover {
+  background: #e0e0e0;
+  
+}
+
+/* Button Active State */
+.buttons button:active {
+  background: #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* Specific Button Types */
+.buttons button.operator {
+  background: #ff8c00;
+  color: white;
+}
+
+.buttons button.operator:hover {
+  background: #e60000;
+}
+
+.buttons button.operator:active {
+  background: #b30000;
+}
+
+.buttons button.double {
+  background: #ff4d4d;
+  color: white;
+  grid-column: span 2; /* Span across two columns */
+}
+
+.buttons button.double:hover {
+  background: #e60000;
+  transform: translateY(-2px);
+}
+
+.buttons button.double:active {
+  background: #b30000;
+  transform: translateY(2px); 
+}
+
+.buttons button.backspace {
+  background: #ff4d4d;
+  color: white;
+}
+
+.buttons button.backspace:hover {
+  background: #e60000;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.buttons button.backspace:active {
+  background: #b30000;
+  transform: translateY(2px);  /*Slight push effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+  }
+
+  .buttons button {
+    padding: 15px;
+    font-size: 1rem; /* Adjust font size for smaller screens   */
+  }
+
+  .display input {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .buttons button.double {
+    grid-column: span 2;
+  }
+
+  .buttons button.triple {
+    grid-column: span 3;
+  }
+}
