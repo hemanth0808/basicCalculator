@@ -63,7 +63,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://basic-calculator-git-main-challahemanths-projects.vercel.app/
+https://basic-calculator-kappa-peach.vercel.app/
+https://basic-calculator-challahemanths-projects.vercel.app/
 
 ### `npm run build` fails to minify
 
