@@ -9,7 +9,7 @@ const Calculator = () => {
   const handleClick = useCallback((value) => {
     if (value === '=') {
       try {
-        const evalResult = evaluate(input); // Use mathjs to evaluate the expression
+        const evalResult = evaluate(input); 
         setResult(evalResult.toString());
       } catch {
         setResult('Error');
@@ -26,8 +26,6 @@ const Calculator = () => {
 
   const handleKeyPress = useCallback((event) => {
     const key = event.key;
-
-    // Mapping key presses to calculator operations
     if (key >= '0' && key <= '9') {
       handleClick(key);
     } else if (key === '+' || key === '-' || key === '*' || key === '/') {
